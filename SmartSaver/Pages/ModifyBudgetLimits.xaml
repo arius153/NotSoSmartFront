@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartSaver.Pages.ModifyBudgetLimits">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+                <Frame Grid.Row="0" BackgroundColor="{Binding color}" BorderColor="#F0F0F0" Padding="5" Margin="0,0,0,0" HasShadow="False">
+                    <Grid HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Food" TextColor="Black" FontSize="16" VerticalOptions="Center" Margin="20,0"/>
+                        <StackLayout Grid.Column="1" Orientation="Horizontal" Margin="20,0" HorizontalOptions="End" VerticalOptions="Center">
+                            <Entry x:Name="food" Placeholder="0.00" TextColor="Black" FontSize="16" FontAttributes="Bold" VerticalOptions="Center"/>
+                        </StackLayout>
+                    </Grid>
+                    
+                </Frame>
+                <Frame Grid.Row="1" BackgroundColor="{Binding color}" BorderColor="#F0F0F0" Padding="5" Margin="0,0,0,0" HasShadow="False">
+                    <Grid HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Leisure" TextColor="Black" FontSize="16" VerticalOptions="Center" Margin="20,0"/>
+                        <StackLayout Grid.Column="1" Orientation="Horizontal" Margin="20,0" HorizontalOptions="End" VerticalOptions="Center">
+                            <Entry x:Name="leisure"  Placeholder="0.00" TextColor="Black" FontSize="16" FontAttributes="Bold" VerticalOptions="Center"/>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Frame Grid.Row="2" BackgroundColor="{Binding color}" BorderColor="#F0F0F0" Padding="5" Margin="0,0,0,0" HasShadow="False">
+                    <Grid HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Rent" TextColor="Black" FontSize="16" VerticalOptions="Center" Margin="20,0"/>
+                        <StackLayout Grid.Column="1" Orientation="Horizontal" Margin="20,0" HorizontalOptions="End" VerticalOptions="Center">
+                            <Entry x:Name="rent" Placeholder="0.00" TextColor="Black" FontSize="16" FontAttributes="Bold" VerticalOptions="Center"/>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Frame Grid.Row="3" BackgroundColor="{Binding color}" BorderColor="#F0F0F0" Padding="5" Margin="0,0,0,0" HasShadow="False">
+                    <Grid HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Loan" TextColor="Black" FontSize="16" VerticalOptions="Center" Margin="20,0"/>
+                        <StackLayout Grid.Column="1" Orientation="Horizontal" Margin="20,0" HorizontalOptions="End" VerticalOptions="Center">
+                            <Entry x:Name="loan" Placeholder="0.00" TextColor="Black" FontSize="16" FontAttributes="Bold" VerticalOptions="Center"/>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Frame Grid.Row="4" BackgroundColor="{Binding color}" BorderColor="#F0F0F0" Padding="5" Margin="0,0,0,0" HasShadow="False">
+                    <Grid HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Alcohol" TextColor="Black" FontSize="16" VerticalOptions="Center" Margin="20,0"/>
+                        <StackLayout Grid.Column="1" Orientation="Horizontal" Margin="20,0" HorizontalOptions="End" VerticalOptions="Center">
+                            <Entry x:Name="alcohol" Placeholder="0.00" TextColor="Black" FontSize="16" FontAttributes="Bold" VerticalOptions="Center"/>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Frame Grid.Row="5" BackgroundColor="{Binding color}" BorderColor="#F0F0F0" Padding="5" Margin="0,0,0,0" HasShadow="False">
+                    <Grid HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Tobacco" TextColor="Black" FontSize="16" VerticalOptions="Center" Margin="20,0"/>
+                        <StackLayout Grid.Column="1" Orientation="Horizontal" Margin="20,0" HorizontalOptions="End" VerticalOptions="Center">
+                            <Entry x:Name="tobacco" Placeholder="0.00" TextColor="Black" FontSize="16" FontAttributes="Bold" VerticalOptions="Center"/>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Frame Grid.Row="6" BackgroundColor="{Binding color}" BorderColor="#F0F0F0" Padding="5" Margin="0,0,0,0" HasShadow="False">
+                    <Grid HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Insurance" TextColor="Black" FontSize="16" VerticalOptions="Center" Margin="20,0"/>
+                        <StackLayout Grid.Column="1" Orientation="Horizontal" Margin="20,0" HorizontalOptions="End" VerticalOptions="Center">
+                            <Entry x:Name="insurance"  Placeholder="0.00" TextColor="Black" FontSize="16" FontAttributes="Bold" VerticalOptions="Center"/>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Frame Grid.Row="7" BackgroundColor="{Binding color}" BorderColor="#F0F0F0" Padding="5" Margin="0,0,0,0" HasShadow="False">
+                    <Grid HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Car" TextColor="Black" FontSize="16" VerticalOptions="Center" Margin="20,0"/>
+                        <StackLayout Grid.Column="1" Orientation="Horizontal" Margin="20,0" HorizontalOptions="End" VerticalOptions="Center">
+                            <Entry x:Name="car" Placeholder="0.00" TextColor="Black" FontSize="16" FontAttributes="Bold" VerticalOptions="Center"/>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Frame Grid.Row="8" BackgroundColor="{Binding color}" BorderColor="#F0F0F0" Padding="5" Margin="0,0,0,0" HasShadow="False">
+                    <Grid HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Subscriptions" TextColor="Black" FontSize="16" VerticalOptions="Center" Margin="20,0"/>
+                        <StackLayout Grid.Column="1" Orientation="Horizontal" Margin="20,0" HorizontalOptions="End" VerticalOptions="Center">
+                            <Entry x:Name="subscriptions" Placeholder="0.00" TextColor="Black" FontSize="16" FontAttributes="Bold" VerticalOptions="Center"/>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Frame Grid.Row="9" BackgroundColor="{Binding color}" BorderColor="#F0F0F0" Padding="5" Margin="0,0,0,0" HasShadow="False">
+                    <Grid HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Goal" TextColor="Black" FontSize="16" VerticalOptions="Center" Margin="20,0"/>
+                        <StackLayout Grid.Column="1" Orientation="Horizontal" Margin="20,0" HorizontalOptions="End" VerticalOptions="Center">
+                            <Entry x:Name="goal" Placeholder="0.00" TextColor="Black" FontSize="16" FontAttributes="Bold" VerticalOptions="Center"/>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Frame Grid.Row="10" BackgroundColor="{Binding color}" BorderColor="#F0F0F0" Padding="5" Margin="0,0,0,0" HasShadow="False">
+                    <Grid HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Other" TextColor="Black" FontSize="16" VerticalOptions="Center" Margin="20,0"/>
+                        <StackLayout Grid.Column="1" Orientation="Horizontal" Margin="20,0" HorizontalOptions="End" VerticalOptions="Center">
+                            <Entry x:Name="other" Placeholder="0.00" TextColor="Black" FontSize="16" FontAttributes="Bold" VerticalOptions="Center"/>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Frame Grid.Row="11" BackgroundColor="{Binding color}" BorderColor="#F0F0F0" Padding="5" Margin="0,0,0,0" HasShadow="False">
+                    <Grid HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Clothes" TextColor="Black" FontSize="16" VerticalOptions="Center" Margin="20,0"/>
+                        <StackLayout Grid.Column="1" Orientation="Horizontal" Margin="20,0" HorizontalOptions="End" VerticalOptions="Center">
+                            <Entry x:Name="clothes" Placeholder="0.00" TextColor="Black" FontSize="16" FontAttributes="Bold" VerticalOptions="Center"/>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Grid Grid.Row="12">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0"
+                            Text="Modify"
+                            Clicked="Button_Clicked"/>
+                    <Button Grid.Column="1"
+                            Text="Cancel"
+                            Clicked="Button_Clicked_1"/>
+                </Grid>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:SmartSaver"
+             x:Class="SmartSaver.Pages.ModifyExpensePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Modify expense"
+                FontSize="40"
+                HorizontalOptions="CenterAndExpand"/>
+            <Label Text="Expense info" 
+                HorizontalOptions="CenterAndExpand"
+                Margin="0,80,0,0"/>
+            <Entry x:Name="modExpenseName"
+                Placeholder="Shopping at Maxima" />
+            <Label Text="Amount" 
+                   HorizontalOptions="CenterAndExpand"/>
+            <Entry x:Name="modMoneyUsed"
+                Placeholder="0.00"
+                Keyboard="Numeric">
+                <Entry.Behaviors>
+                    <local:CurrencyBehavior></local:CurrencyBehavior>
+                </Entry.Behaviors>
+            </Entry>
+            <Label Text="Category" 
+                   HorizontalOptions="CenterAndExpand"/>
+            <Picker Title="Select a category" 
+                x:Name="modExpenseCategory"
+                ItemsSource="{Binding Categories}"
+                ItemDisplayBinding="{Binding CategoryName}"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0"
+                    Text="Modify"
+                    Clicked="ModifyButton_Clicked"/>
+                <Button 
+                    x:Name="cancelButton"
+                    Grid.Column="1"
+                    Text="Close"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

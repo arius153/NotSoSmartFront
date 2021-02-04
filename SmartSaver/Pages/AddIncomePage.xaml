@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:SmartSaver"
+             x:Class="SmartSaver.Pages.AddIncomePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Add income"
+                FontSize="40"
+                HorizontalOptions="CenterAndExpand"/>
+            <Label Text="Income info" 
+                HorizontalOptions="CenterAndExpand"
+                Margin="0,80,0,0"/>
+            <Entry x:Name="incomeName"
+                Placeholder="Paycheck"/>
+            <Label Text="Amount"
+                HorizontalOptions="CenterAndExpand"/>
+            <Entry x:Name="moneyUsed"
+                Placeholder="0.00"
+                Keyboard="Numeric">
+                <Entry.Behaviors>
+                    <local:CurrencyBehavior></local:CurrencyBehavior>
+                </Entry.Behaviors>
+            </Entry>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0"
+                    Text="Add"
+                    Clicked="AddButton_Clicked"/>
+                <Button 
+                    x:Name="cancelButton"
+                    Grid.Column="1"
+                    Text="Close"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

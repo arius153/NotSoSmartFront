@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartSaver.Pages.EditPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="First Name" 
+                   HorizontalOptions="CenterAndExpand"
+                   Margin="0,20,0,0"/>
+            <Entry x:Name="firstName"
+                Placeholder="Max" />
+            <Label Text="Email Address"
+                HorizontalOptions="CenterAndExpand"/>
+            <Entry x:Name="emailAddress"
+                Placeholder="name@email.com" />
+            <Button Text="Save" 
+                VerticalOptions="EndAndExpand"
+                Clicked="SaveClicked"/>
+            <Button Text="Cancel"
+                Clicked="CancelClicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

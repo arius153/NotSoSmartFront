@@ -1,0 +1,60 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SmartSaver.Pages.BudgetsPage">
+
+    <Grid VerticalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Image Source="back.png" Aspect="Fill" HeightRequest="100" VerticalOptions="StartAndExpand"/>
+        <StackLayout Orientation="Vertical" Margin="20,20" HorizontalOptions="Center" VerticalOptions="Center">
+            <Label Text="Budgets" TextColor="Black" FontSize="34" VerticalOptions="Center" HorizontalOptions="Center"/>
+        </StackLayout>
+        <Frame Grid.Row="1" HasShadow="True" CornerRadius="10" Margin="20,0,20,0" Padding="0" HeightRequest="120" VerticalOptions="Start">
+
+
+
+            <StackLayout Grid.Column="2" Orientation="Vertical" Spacing="10" HorizontalOptions="CenterAndExpand">
+                <Button
+                        ImageSource="modify.png"
+                        HeightRequest="70"
+                        VerticalOptions="CenterAndExpand"
+                        Clicked="Button_Clicked"/>
+                <StackLayout Spacing="7" HorizontalOptions="CenterAndExpand">
+                    <Label Text="Modify" TextColor="Black" FontSize="12" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+        <StackLayout Grid.Row="2" BackgroundColor="Transparent" Orientation="Horizontal" Margin="20" HorizontalOptions="End">
+            <Label Text="Your Budgets" TextColor="Black" FontSize="14" HorizontalOptions="EndAndExpand"/>
+        </StackLayout>
+        <ListView x:Name="BudgetssList" ItemsSource="{Binding Budgets}" SeparatorVisibility="None"
+                  Grid.Row="3" Margin="20,0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <ListView.ItemTemplate>
+                <DataTemplate >
+                    <ViewCell>
+                        <Frame BackgroundColor="{Binding color}" BorderColor="#F0F0F0" Padding="5" Margin="0,0,0,5" HasShadow="False">
+                            <Grid HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="{Binding category}" TextColor="Black" FontSize="16" VerticalOptions="Center" Margin="20,0"/>
+                                <StackLayout Grid.Column="1" Orientation="Horizontal" Margin="20,0" HorizontalOptions="End" VerticalOptions="Center">
+                                    <Label Text="{Binding NewProperty}" TextColor="Black" FontSize="20" FontAttributes="Bold" VerticalOptions="Center"/>
+                                </StackLayout>
+                            </Grid>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+
+</ContentPage>

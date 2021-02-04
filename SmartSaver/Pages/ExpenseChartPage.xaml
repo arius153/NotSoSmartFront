@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartSaver.Pages.ExpenseChartPage"
+             xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms">
+    <ContentPage.Content>
+        <StackLayout>
+            <DatePicker MinimumDate="01/01/2018"
+            MaximumDate="12/31/2023"
+            Date="11/01/2020"
+            x:Name="datepicker"/>
+            <microcharts:ChartView x:Name="chartViewPie" HeightRequest="300"/>
+            <ListView x:Name="EntriesList" ItemsSource="{Binding Entries}" SeparatorVisibility="None"
+                   Margin="20,0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <ListView.ItemTemplate>
+                    <DataTemplate >
+                        <ViewCell>
+                            <Frame BackgroundColor="White" BorderColor="#F0F0F0" Padding="5" Margin="0,0,0,5" HasShadow="False">
+                                <Grid HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Button BackgroundColor="{Binding Color}" VerticalOptions="Center" HorizontalOptions="Start" Margin="10,0,0,0"/>
+                                    <Label Text="{Binding Label}" Grid.Column="1" TextColor="#757575" LineBreakMode="WordWrap" FontSize="16" VerticalOptions="Center" HorizontalOptions="Start" Margin="10,0,0,0"/>
+                                    <Label Text="{Binding ValueLabel}" Grid.Column="2" TextColor="#757575" LineBreakMode="WordWrap" FontSize="16" VerticalOptions="Center" HorizontalOptions="Start" Margin="10,0,0,0"/>
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

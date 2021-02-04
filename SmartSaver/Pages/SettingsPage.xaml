@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartSaver.Pages.SettingsPage">
+    <Grid VerticalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Image Source="back.png" Aspect="Fill" HeightRequest="150" VerticalOptions="StartAndExpand"/>
+        <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+            <Label Text="Settings" TextColor="Black" FontSize="34" HeightRequest="100" VerticalOptions="Center" HorizontalOptions="Center"/>
+        </StackLayout>
+        <Grid HeightRequest="250" HorizontalOptions="FillAndExpand" VerticalOptions="Start" Margin="30, 30">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Edit user" Grid.Column="0" TextColor="Black" 
+                   LineBreakMode="WordWrap" FontSize="16" 
+                   VerticalOptions="Center" Grid.Row="2"/>
+            <Button Text="Edit" Grid.Column="2" 
+                    VerticalOptions="Center" HeightRequest="60" 
+                    Clicked="EditClicked" Grid.Row="2"/>
+            <!--<Label Text="Edit password" Grid.Column="0" TextColor="Black" 
+                   LineBreakMode="WordWrap" FontSize="16" 
+                   VerticalOptions="Center" Grid.Row="3"/>
+            <Button Text="Edit" Grid.Column="2" 
+                    VerticalOptions="Center" HeightRequest="60" 
+                    Clicked="EditPassClicked" Grid.Row="3"/>-->
+        </Grid>
+    </Grid>
+</ContentPage>

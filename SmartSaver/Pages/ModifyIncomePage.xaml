@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:SmartSaver"
+             x:Class="SmartSaver.Pages.ModifyIncomePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Modify Income"
+                FontSize="40"
+                HorizontalOptions="CenterAndExpand"/>
+            <Label Text="Income info" 
+                HorizontalOptions="CenterAndExpand"
+                Margin="0,80,0,0"/>
+            <Entry x:Name="modIncomename"
+                Placeholder="Paycheck" />
+            <Label Text="Amount" 
+                   HorizontalOptions="CenterAndExpand"/>
+            <Entry x:Name="modMoneirecieved"
+                Placeholder="0.00"
+                Keyboard="Numeric">
+                <Entry.Behaviors>
+                    <local:CurrencyBehavior></local:CurrencyBehavior>
+                </Entry.Behaviors>
+            </Entry>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0"
+                    Text="Modify"
+                    Clicked="ModifyButton_Clicked"/>
+                <Button Grid.Column="1"
+                    Text="Close"
+                    Clicked="CancelButton_Clicked"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

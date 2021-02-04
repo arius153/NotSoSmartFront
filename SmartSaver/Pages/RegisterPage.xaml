@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartSaver.Pages.RegisterPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="First Name" 
+                   HorizontalOptions="CenterAndExpand"
+                   Margin="0,20,0,0"/>
+            <Entry x:Name="firstName"
+                Placeholder="Max" />
+            <Label Text="Last Name"
+                HorizontalOptions="CenterAndExpand"/>
+            <Entry x:Name="lastName"
+                Placeholder="Power"/>
+            <Label Text="Email Address"
+                HorizontalOptions="CenterAndExpand"/>
+            <Entry x:Name="emailAddress"
+                Placeholder="name@email.com" />
+            <Label Text="Password" 
+                HorizontalOptions="CenterAndExpand"/>
+            <Entry x:Name="password"
+                IsPassword="True"
+                Placeholder="******" />
+            <Label Text="Repeat Password"
+                HorizontalOptions="CenterAndExpand"/>
+            <Entry x:Name="repeatedPassword"
+                IsPassword="True"
+                Placeholder="******" />
+            <Button Text="Register" 
+                VerticalOptions="EndAndExpand"
+                Clicked="Button_Clicked"/>
+            <Button Text="Cancel"
+                Clicked="Button_Clicked_1"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

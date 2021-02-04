@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartSaver.Pages.ViewGoalPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Frame Grid.Row="0" BackgroundColor="{Binding color}" BorderColor="#F0F0F0" Padding="5" Margin="0,0,0,0" HasShadow="False">
+                    <Grid HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Name" TextColor="Black" FontSize="16" VerticalOptions="Center" Margin="20,0"/>
+                        <StackLayout Grid.Column="1" Orientation="Horizontal" Margin="20,0" HorizontalOptions="End" VerticalOptions="Center">
+                            <Label x:Name="goalName" TextColor="Black" FontSize="16" FontAttributes="Bold" VerticalOptions="Center"/>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Frame Grid.Row="1" BackgroundColor="{Binding color}" BorderColor="#F0F0F0" Padding="5" Margin="0,0,0,0" HasShadow="False">
+                    <Grid HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Allocated money" TextColor="Black" FontSize="16" VerticalOptions="Center" Margin="20,0"/>
+                        <StackLayout Grid.Column="1" Orientation="Horizontal" Margin="20,0" HorizontalOptions="End" VerticalOptions="Center">
+                            <Label x:Name="allocatedMoney"  TextColor="Black" FontSize="16" FontAttributes="Bold" VerticalOptions="Center"/>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Frame Grid.Row="2" BackgroundColor="{Binding color}" BorderColor="#F0F0F0" Padding="5" Margin="0,0,0,0" HasShadow="False">
+                    <Grid HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Required Money" TextColor="Black" FontSize="16" VerticalOptions="Center" Margin="20,0"/>
+                        <StackLayout Grid.Column="1" Orientation="Horizontal" Margin="20,0" HorizontalOptions="End" VerticalOptions="Center">
+                            <Label x:Name="requiredMoney" TextColor="Black" FontSize="16" FontAttributes="Bold" VerticalOptions="Center"/>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Frame Grid.Row="3" BackgroundColor="{Binding color}" BorderColor="#F0F0F0" Padding="5" Margin="0,0,0,0" HasShadow="False">
+                    <Grid HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Money left" TextColor="Black" FontSize="16" VerticalOptions="Center" Margin="20,0"/>
+                        <StackLayout Grid.Column="1" Orientation="Horizontal" Margin="20,0" HorizontalOptions="End" VerticalOptions="Center">
+                            <Label x:Name="moneyLeft" TextColor="Black" FontSize="16" FontAttributes="Bold" VerticalOptions="Center"/>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Frame Grid.Row="4" BackgroundColor="{Binding color}" BorderColor="#F0F0F0" Padding="5" Margin="0,0,0,0" HasShadow="False">
+                    <Grid HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Finish date" TextColor="Black" FontSize="16" VerticalOptions="Center" Margin="20,0"/>
+                        <StackLayout Grid.Column="1" Orientation="Horizontal" Margin="20,0" HorizontalOptions="End" VerticalOptions="Center">
+                            <Label x:Name="finishDay" TextColor="Black" FontSize="16" FontAttributes="Bold" VerticalOptions="Center"/>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Frame Grid.Row="5" BackgroundColor="{Binding color}" BorderColor="#F0F0F0" Padding="5" Margin="0,0,0,0" HasShadow="False">
+                    <Grid HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Days left" TextColor="Black" FontSize="16" VerticalOptions="Center" Margin="20,0"/>
+                        <StackLayout Grid.Column="1" Orientation="Horizontal" Margin="20,0" HorizontalOptions="End" VerticalOptions="Center">
+                            <Label x:Name="daysLeft" TextColor="Black" FontSize="16" FontAttributes="Bold" VerticalOptions="Center"/>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <ProgressBar x:Name="progressBar" Grid.Row="6" Progress="0.5"/>
+                <Grid Grid.Row="7">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0"
+                            Text="Complete"
+                            IsEnabled="False"
+                            x:Name="completeButton"
+                            Clicked="CompleteButton_Clicked"/>
+                    <Button Grid.Column="1"
+                            Text="Go back"
+                            Clicked="GoBackButton_Clicked"/>
+                </Grid>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
